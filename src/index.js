@@ -10,6 +10,10 @@ app.use( express.json() );
 app.use( userRouter );
 app.use( tweetRouter );
 
+app.get( "/", async ( req, res ) => {
+    res.send( 'hello world' );
+} );
+
 app.listen( port, () => {
     console.log( "Server is up at " + port );
 } );
